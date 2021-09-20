@@ -1,2 +1,28 @@
 // Home page styles
 @import "master-page";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../components/navigation";
+@import "../layout/grid";
+
+$text-font: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+
+$text-size: 14px;
+
+$color-silver: rgb(42, 43, 44);
+
+
+
+h2{
+    margin-left: 30px;
+    font-size: 25pt;
+    padding-bottom: 20pt;
+    padding-top: 20pt;
+    
+}
+@media only screen and (max-width: 700px)
+{
+    
+    
+}
+
+

@@ -1,1 +1,63 @@
 // Grid styles
+@media (max-width: 700px) {
+    .table_sun {
+        display: none;
+    }
+}
+@media (min-width: 700px) {
+    .table_sun_mobile {
+        display: none;
+    }
+}
+.table_sun {
+    #row-1 {
+        border-bottom: 1px solid black;
+        padding-bottom: 5px;
+        span {
+            font-size: 12pt;
+        }
+    }
+
+    #row-2 {
+        padding-top: 10px;
+        border-bottom: 1px solid rgb(151, 146, 146);
+        padding-bottom: 10px;
+    }
+    .chudam {
+        font-weight: bold;
+    }
+    .row {
+        margin-left: 5pt;
+    }
+    #row-3 {
+        padding-top: 10px;
+        border-bottom: 1px solid rgb(151, 146, 146);
+        padding-bottom: 10px;
+    }
+    @for $j from 4 to 7 {
+        #row-#{$j} {
+            @extend #row-3;
+        }
+    }
+
+    margin-left: 20pt;
+}
+.table_sun_mobile {
+    margin-left: 10px;
+    .card {
+        margin-bottom: 20px;
+        .row {
+            padding-top: 10px;
+            border-bottom: 1px solid rgb(151, 146, 146);
+            padding-bottom: 10px;
+            margin-left: 1px;
+        }
+        .chudamM{
+            font-weight: bold;
+        }
+        .ms-Icon
+        {
+            padding-left: 50px;
+        }
+    }
+}
