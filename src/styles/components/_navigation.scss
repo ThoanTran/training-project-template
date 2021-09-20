@@ -19,7 +19,7 @@
     }
     .nav__button{
         margin-left: 90%;
-
+       
     }
     .overlay {
         position: fixed;
@@ -45,18 +45,14 @@
         .PC {
             display: none;
         }
-        
-    }
-    
-    @media only screen and (min-width: 720px) {
-        // .Mobile{
-        //     display: none;
-        // }
-        .flex-column {
-            display: none;
-
+        .flex-column{
+            .nav-link-2{
+                border-top: 1px solid rgb(221, 157, 157);
+            }
         }
     }
+    
+    
     .nav__input:checked ~ .overlay {
         display: block;
     }

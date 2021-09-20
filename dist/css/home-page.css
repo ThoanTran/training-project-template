@@ -15,9 +15,21 @@
 .table_sun #row-1 {
   border-bottom: 1px solid black;
   padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .table_sun #row-1 span {
   font-size: 12pt;
+}
+.table_sun .ms-Icon {
+  padding-right: 10px;
+}
+.table_sun .ms-Icon--Add {
+  padding-right: 5px;
+}
+.table_sun .ms-Icon--ChevronDown {
+  padding-left: 5px;
 }
 .table_sun #row-2 {
   padding-top: 10px;
@@ -10048,10 +10060,8 @@ h3 {
   .navigation .PC {
     display: none;
   }
-}
-@media only screen and (min-width: 720px) {
-  .navigation .flex-column {
-    display: none;
+  .navigation .flex-column .nav-link-2 {
+    border-top: 1px solid #dd9d9d;
   }
 }
 .navigation .nav__input:checked ~ .overlay {
@@ -10077,9 +10087,21 @@ h3 {
 .table_sun #row-1 {
   border-bottom: 1px solid black;
   padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .table_sun #row-1 span {
   font-size: 12pt;
+}
+.table_sun .ms-Icon {
+  padding-right: 10px;
+}
+.table_sun .ms-Icon--Add {
+  padding-right: 5px;
+}
+.table_sun .ms-Icon--ChevronDown {
+  padding-left: 5px;
 }
 .table_sun #row-2 {
   padding-top: 10px;

@@ -16,6 +16,20 @@
         span {
             font-size: 12pt;
         }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .ms-Icon{
+        padding-right: 10px;
+    }
+    .ms-Icon--Add
+    {
+        padding-right: 5px;
+    }
+    .ms-Icon--ChevronDown{
+        padding-left: 5px;
     }
 
     #row-2 {
