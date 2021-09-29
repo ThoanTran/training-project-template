@@ -14,12 +14,11 @@
     }
     .ms-Icon--GlobalNavButton {
         margin-left: 90%;
-    
+
         display: none;
     }
-    .nav__button{
+    .nav__button {
         margin-left: 90%;
-       
     }
     .overlay {
         position: fixed;
@@ -35,7 +34,7 @@
     }
     .flex-column {
         display: none;
-        }
+    }
 
     @media only screen and (max-width: 700px) {
         .ms-Icon--GlobalNavButton {
@@ -45,22 +44,23 @@
         .PC {
             display: none;
         }
-        .flex-column{
-            .nav-link-2{
+        .flex-column {
+            .nav-link-2 {
                 border-top: 1px solid rgb(221, 157, 157);
             }
         }
+        h2{
+            z-index: -1;
+        }
     }
-    
-    
+
     .nav__input:checked ~ .overlay {
         display: block;
     }
     .nav__input:checked ~ .flex-column {
         display: block;
-        
-       
     }
+    
 }
 // display: flex;
 // flex-direction: row;

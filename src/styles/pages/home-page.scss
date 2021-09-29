@@ -17,12 +17,61 @@ h2{
     font-size: 25pt;
     padding-bottom: 20pt;
     padding-top: 20pt;
+    z-index: -1;
     
 }
 @media only screen and (max-width: 700px)
 {
+    .flex-column{
+        z-index: -1 !important;
+    }
+    h2{
+        z-index: 1 !important;
+        
+    }
+    .table_sun_mobile{
+        z-index: 1 !important;
+    }
     
     
 }
+#row-11{
+    border-bottom: 1px solid rgb(29, 165, 228) !important;
+        padding-bottom: 5px;
+        span {
+            font-size: 12pt;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+}
 
-
+#formsun{
+    border-bottom: 1px solid rgb(9, 218, 131) !important;
+    border-top: 1px solid rgb(9, 218, 131) !important;
+    border-left: 1px solid rgb(9, 218, 131) !important;
+    border-right: 1px solid rgb(9, 218, 131) !important;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 400px;
+    .row{
+        padding: 10px !important;
+    }
+    .col-sm-1{
+        padding-left: 30px;
+    }
+    display: none;
+    button{
+        margin-left: 950px !important;
+        padding-right: 30px !important;
+        margin-bottom: 30px !important;
+    }
+}
+#bt_delete
+{
+    display: none;
+}
+#loading_Sun{
+    display: none;
+}

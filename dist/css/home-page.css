@@ -1,15 +1,6 @@
 @charset "UTF-8";
-@media (max-width: 700px) {
-  .table_sun {
-    display: none;
-  }
-}
-@media (min-width: 700px) {
-  .table_sun_mobile {
-    display: none;
-  }
-}
 .table_sun {
+  display: none;
   margin-left: 20pt;
 }
 .table_sun #row-1 {
@@ -69,6 +60,28 @@
   border-bottom: none;
 }
 
+@media (max-width: 700px) {
+  .table_sun {
+    display: none;
+  }
+
+  h2 {
+    z-index: -2 !important;
+  }
+
+  .table_sun_mobile {
+    z-index: -1;
+  }
+
+  .flex-column {
+    z-index: 5;
+  }
+}
+@media (min-width: 700px) {
+  .table_sun_mobile {
+    display: none;
+  }
+}
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -10063,6 +10076,9 @@ h3 {
   .navigation .flex-column .nav-link-2 {
     border-top: 1px solid #dd9d9d;
   }
+  .navigation h2 {
+    z-index: -1;
+  }
 }
 .navigation .nav__input:checked ~ .overlay {
   display: block;
@@ -10071,17 +10087,8 @@ h3 {
   display: block;
 }
 
-@media (max-width: 700px) {
-  .table_sun {
-    display: none;
-  }
-}
-@media (min-width: 700px) {
-  .table_sun_mobile {
-    display: none;
-  }
-}
 .table_sun {
+  display: none;
   margin-left: 20pt;
 }
 .table_sun #row-1 {
@@ -10141,11 +10148,89 @@ h3 {
   border-bottom: none;
 }
 
+@media (max-width: 700px) {
+  .table_sun {
+    display: none;
+  }
+
+  h2 {
+    z-index: -2 !important;
+  }
+
+  .table_sun_mobile {
+    z-index: -1;
+  }
+
+  .flex-column {
+    z-index: 5;
+  }
+}
+@media (min-width: 700px) {
+  .table_sun_mobile {
+    display: none;
+  }
+}
 h2 {
   margin-left: 30px;
   font-size: 25pt;
   padding-bottom: 20pt;
   padding-top: 20pt;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 700px) {
+  .flex-column {
+    z-index: -1 !important;
+  }
+
+  h2 {
+    z-index: 1 !important;
+  }
+
+  .table_sun_mobile {
+    z-index: 1 !important;
+  }
+}
+#row-11 {
+  border-bottom: 1px solid #1da5e4 !important;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#row-11 span {
+  font-size: 12pt;
+}
+
+#formsun {
+  border-bottom: 1px solid #09da83 !important;
+  border-top: 1px solid #09da83 !important;
+  border-left: 1px solid #09da83 !important;
+  border-right: 1px solid #09da83 !important;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 400px;
+  display: none;
+}
+#formsun .row {
+  padding: 10px !important;
+}
+#formsun .col-sm-1 {
+  padding-left: 30px;
+}
+#formsun button {
+  margin-left: 950px !important;
+  padding-right: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+#bt_delete {
+  display: none;
+}
+
+#loading_Sun {
+  display: none;
 }
 
 /*# sourceMappingURL=home-page.css.map*/

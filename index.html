@@ -8,20 +8,32 @@
 	<link rel="stylesheet"
 		href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css">
 	<title>Sun Thoan</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 
 <body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
 	<div class="navigation">
 		
 		<ul class="nav PC">
-			<li class="nav-item">
-				<!-- New -->
-				<a class="nav-link nav-link-2" aria-current="page" href="#">
-					<i class="ms-Icon ms-Icon--Add ms-fontColor-magentaLight"></i>
-					<span> New </span>
-					<i class="ms-Icon ms-Icon--ChevronDown"></i>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+				  aria-expanded="false">
+				  <i class="ms-Icon ms-Icon--Add ms-fontColor-magentaLight"></i>
+				  <span> New </span>
+				  <i class="ms-Icon ms-Icon--ChevronDown"></i>
 				</a>
-			</li>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="#" onclick=creatnew(true)>Folder </a></li>
+				  <li><a class="dropdown-item" href="#" onclick=creatnew(false)>File</a></li>
+	
+				</ul>
+			  </li>
+			
+			
 			<li class="nav-item">
 				<!-- Upload -->
 				<a class="nav-link" href="#">
@@ -52,6 +64,7 @@
 					<i class="ms-Icon ms-Icon--ChevronDown"></i>
 				</a>
 			</li>
+			
 			<li class="nav-item">
 				<a class="nav-link">
 					<i class="ms-Icon ms-Icon--More"></i>
@@ -61,8 +74,6 @@
 		<label for="input_mobile_checkbox" class="nav__button">
 			<i class="ms-Icon ms-Icon--GlobalNavButton"></i>
 		</label>
-
-
 		<input type="checkbox" name="" class="nav__input" id="input_mobile_checkbox">
 		<!-- <label for="input_mobile_checkbox" class="overlay">
 		</label> -->
@@ -114,11 +125,49 @@
 
 
 	</div>
-	<div>
+	<div id = "formsun">
+		<h5 id ="headersun"> Form create new </h5>
+		<form class="Formfile" id="id_Formfile">			
+			<div class="row g-3 align-items-center filesun_">
+			  <div class="col-sm-2">
+				<label for="input_filename" class="col-form-label">File Name</label>
+			  </div>
+			  <div class="col-sm-3">
+				<input type="text" id="input_filename" class="form-control">
+			  </div>
+			  <div class="col-sm-1">
+				<label for="input_at" class="col-form-label">At</label>
+			  </div>
+			  <div class="col-sm-3">
+				<input type="text" id="input_at" class="form-control">
+			  </div>
+			</div>
+			<div class="row g-3 align-items-center filesun_">
+				<div class="col-sm-2">
+				  <label for="input_filetype" class="col-form-label">File type</label>
+				</div>
+				<div class="col-sm-3">
+				  <input type="text" id="input_filetype" class="form-control">
+				</div>
+				<div class="col-sm-1">
+				  <label for="input_by" class="col-form-label">by</label>
+				</div>
+				<div class="col-sm-3">
+				  <input type="text" id="input_by" class="form-control">
+				</div>
+			  </div>
+			  <button type="submit" class="btn btn-primary btn-lg" id ="bt_Modify" onclick=creatnewfile()>Create</button>
+			  <button type="submit" class="btn btn-primary btn-lg" id ="bt_delete" onclick=deletes()>Delete</button>
+
+			  <button type="submit" class="btn btn-primary btn-lg" id ="bt_exit" onclick=exit()>Exit</button>
+		  </form>
+
+	</div>
+
 
 		<h2>Document</h2>
 
-	</div>
+
 	<section class="table_sun">
 		<div class="row" id="row-1">
 			<div class="col-sm-1"> </div>
@@ -142,8 +191,6 @@
 				<span>Column</span>
 			</div>
 		</div>
-
-
 		<div class="row" id="row-2">
 			<div class="col-sm-1"> </div>
 			<div class="col-sm-4">
@@ -154,7 +201,6 @@
 				<span>April 30</span>
 			</div>
 			<div class="col-sm-2">
-
 				<span> Megan Bowen</span>
 			</div>
 
@@ -178,7 +224,7 @@
 		<div class="row" id="row-4">
 			<div class="col-sm-1"> </div>
 			<div class="col-sm-4">
-				<i class="ms-Icon ms-Icon--ExcelLogoInverse16"></i>
+				<i class="ms-Icon ms-Icon--ExcelDocument"></i>
 				<span>RevenuaByServices.xlsx</span>
 			</div>
 			<div class="col-sm-2">
@@ -193,7 +239,7 @@
 		<div class="row" id="row-5">
 			<div class="col-sm-1"> </div>
 			<div class="col-sm-4">
-				<i class="ms-Icon ms-Icon--ExcelLogoInverse16"></i>
+				<i class="ms-Icon ms-Icon--ExcelDocument"></i>
 				<span>RevenuaByServices2016.xlsx</span>
 			</div>
 			<div class="col-sm-2">
@@ -208,7 +254,7 @@
 		<div class="row" id="row-6">
 			<div class="col-sm-1"> </div>
 			<div class="col-sm-4">
-				<i class="ms-Icon ms-Icon--ExcelLogoInverse16"></i>
+				<i class="ms-Icon ms-Icon--ExcelDocument"></i>
 				<span>RevenuaByServices2017.xlsx</span>
 			</div>
 			<div class="col-sm-2">
@@ -363,6 +409,64 @@
 
 		</div>
 	</section>
+	<div id ="sun_filelist1">
+		<div class="row" id="row-11">
+			<div class="col-sm-1"> </div>
+			<div class="col-sm-4">
+				<i class="ms-Icon ms-Icon--Page"></i>
+				<span>Name</span>
+				<i class="ms-Icon ms-Icon--ChevronDown"></i>
+			</div>
+			<div class="col-sm-2">
+
+				<span>Modified</span>
+				<i class="ms-Icon ms-Icon--ChevronDown"></i>
+			</div>
+			<div class="col-sm-2">
+
+				<span>Modified by</span>
+				<i class="ms-Icon ms-Icon--ChevronDown"></i>
+			</div>
+			<div class="col-sm-3">
+				<i class="ms-Icon ms-Icon--Add"></i>
+				<span>Column</span>
+			</div>
+		</div>
+		
+		<div id ="sun_filelist">
+
+		</div>
+	</div>
+	
+<form id="loading_Sun">
+	<div class="spinner-border text-primary" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+	  <div class="spinner-border text-secondary" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+	  <div class="spinner-border text-success" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+	  <div class="spinner-border text-danger" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+	  <div class="spinner-border text-warning" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+	  <div class="spinner-border text-info" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+	  <div class="spinner-border text-light" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+	  <div class="spinner-border text-dark" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+
+</form>
+
+<script src="/dist/js/homepages.js"></script>
 </body>
 
 </html>

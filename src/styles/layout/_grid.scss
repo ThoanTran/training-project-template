@@ -1,15 +1,7 @@
 // Grid styles
-@media (max-width: 700px) {
-    .table_sun {
-        display: none;
-    }
-}
-@media (min-width: 700px) {
-    .table_sun_mobile {
-        display: none;
-    }
-}
+
 .table_sun {
+    display: none;
     #row-1 {
         border-bottom: 1px solid black;
         padding-bottom: 5px;
@@ -76,5 +68,24 @@
         .row-noborder{
             border-bottom:  none;
         }
+    }
+}
+@media (max-width: 700px) {
+    .table_sun {
+        display: none;
+    }
+    h2{
+        z-index: -2 !important;
+    }
+    .table_sun_mobile{
+        z-index: -1;
+    }
+    .flex-column{
+        z-index: 5;
+    }
+}
+@media (min-width: 700px) {
+    .table_sun_mobile {
+        display: none;
     }
 }
